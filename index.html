@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Premier Projet</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            margin: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover { transform: scale(1.05); }
+        #message { font-size: 1.2rem; color: #333; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Bonjour !</h1>
+        <p id="message">Clique pour recevoir de la force 💪</p>
+        <button onclick="genererCompliment()">Générer</button>
+    </div>
+
+    <script>
+        // Voici la "logique" qui remplace le serveur
+        function genererCompliment() {
+            const compliments = [
+                "Tu vas devenir un super dev ! 💻",
+                "Ta persévérance est ta plus grande force. 🚀",
+                "Chaque erreur est une leçon déguisée. 💡",
+                "Le code, c'est comme le vélo : ça finit par rentrer ! 🚲"
+            ];
+
+            const hasard = Math.floor(Math.random() * compliments.length);
+            document.getElementById('message').innerText = compliments[hasard];
+        }
+    </script>
+
+</body>
+</html>
