@@ -14,11 +14,22 @@
     <script>
         // On crée une fonction qui contient l'action
         function direBravo() {
+            // constante de réalisation de liste []
+            const listeCompliments = [
+                "Tu progresses à chaque ligne de code", 
+                "C'est super"
+                ]; 
+            const listeCouleurs = [
+                "green", 
+                "red", 
+                "purple"
+                ];
+            // chercher alétoirement le compliment 
+            const indexAleatoire = Math.floor(Math.random() * listeCompliments.length);
             // On sélectionne la zone de texte
             const afficheur = document.getElementById('zoneTexte');
             // On change son contenu
-            afficheur.innerText = "Tu progresses à chaque ligne de code ! 🚀";
-            afficheur.innerText = "C'est très bien"; 
+            afficheur.innerText = listeCompliments[indexAleatoire];
             // On change sa couleur
             afficheur.style.color = "green";
         }
