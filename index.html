@@ -1,10 +1,12 @@
 <button id="btnGenerer" type="button">Générer</button>
+<p id="message"></p> 
 
 <script>
-    // On sélectionne les éléments une seule fois (plus performant)
+    // 1. Sélection des éléments
     const btn = document.getElementById('btnGenerer');
     const messageElement = document.getElementById('message');
 
+    // 2. Nos banques de données
     const compliments = [
         "Tu vas devenir un super dev ! 💻",
         "Ta persévérance est ta plus grande force. 🚀",
@@ -14,11 +16,13 @@
     
     const couleurs = ["#FF0000", "#A020F0", "#FFD700", "#008000"];
 
-    // On utilise un écouteur d'événement au lieu du onclick
+    // 3. Logique au clic
     btn.addEventListener('click', () => {
+        // Calcul d'un index aléatoire
         const indexTexte = Math.floor(Math.random() * compliments.length);
         const indexCouleur = Math.floor(Math.random() * couleurs.length);
 
+        // Modification du contenu et de la couleur
         messageElement.innerText = compliments[indexTexte];
         messageElement.style.color = couleurs[indexCouleur];
     });
