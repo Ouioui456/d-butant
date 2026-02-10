@@ -18,10 +18,9 @@
         let complimentation = "Grosse merde";
         // On crée une fonction qui contient l'action
         function direBravo() {
-            if (score >= 10) {
-                 document.getElementById('rang').innerText = "Débutant";
-            }
-              if (score >= 20) {
+            if (score >= 20) {
+                 document.getElementById('rang').innerText = "Complimenté";
+            } else if (score >= 10) {
                  document.getElementById('rang').innerText = "Midfield";
             }
             // constante de réalisation de liste []
