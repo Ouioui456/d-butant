@@ -11,7 +11,9 @@
     
     <h3 id="zoneTexte">Le compliment apparaîtra ici...</h3>
 
+    <p> J'ai reçu aujourd'hui <span id ="compteur">0</span></p>
     <script>
+        let score = 0; 
         // On crée une fonction qui contient l'action
         function direBravo() {
             // constante de réalisation de liste []
@@ -36,6 +38,10 @@
             afficheur.innerText = listeCompliments[indexAleatoire];
             // On change sa couleur
             afficheur.style.color = listeCouleurs[indexCouleursAleatoire];
+            // je dis au score qu'il doit s'ajouter 1 à chaque action de la fonction
+            score = score + 1
+            // je demande à l'afficheur de le traduire en visuel 
+            document.getElementById('compteur').innerText = score;
         }
 
         // On dit au bouton : "Au clic, exécute la fonction direBravo"
