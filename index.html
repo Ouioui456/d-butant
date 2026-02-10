@@ -12,16 +12,16 @@
     <h3 id="zoneTexte">Le compliment apparaîtra ici...</h3>
 
     <p> J'ai reçu aujourd'hui <span id ="compteur">0</span> compliments !</p>
-    <p> Ton rang de personne complimentée : <span id ="rang">Grosse merde</span></p>
+    <p> Ton rang de personne complimentée : <span id ="rang"></span></p>
     <script>
         let score = 0; 
         let complimentation = "Grosse merde";
         // On crée une fonction qui contient l'action
         function direBravo() {
-            if (score === 10) {
+            if (score >= 10) {
                  document.getElementById('rang').innerText = "Débutant";
             }
-              if (score === 20) {
+              if (score >= 20) {
                  document.getElementById('rang').innerText = "Midfield";
             }
             // constante de réalisation de liste []
