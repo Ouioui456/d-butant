@@ -44,12 +44,13 @@
             score = score + 1
             // je demande à l'afficheur de le traduire en visuel 
             document.getElementById('compteur').innerText = score;
-                if (score >= 20) {
+                if (score > 20) {
                      document.getElementById('rang').innerText = "Complimenté";
-                } else if (score >= 10) {
+                } else if (score > 10) {
                      document.getElementById('rang').innerText = "Midfield";
-                }
+                } else {
             document.getElementById('rang').innerText = complimentation;
+                }
         }
 
         // On dit au bouton : "Au clic, exécute la fonction direBravo"
