@@ -12,10 +12,15 @@
     <h3 id="zoneTexte">Le compliment apparaîtra ici...</h3>
 
     <p> J'ai reçu aujourd'hui <span id ="compteur">0</span> compliments !</p>
+    <p> Ton rang de personne complimentée : <span id ="rang">Grosse merde</span></p>
     <script>
         let score = 0; 
+        let complimentation = "Grosse merde";
         // On crée une fonction qui contient l'action
         function direBravo() {
+            if (score === 10) {
+                 document.getElementById('rang').innerText = Débutant;
+            }
             // constante de réalisation de liste []
             const listeCompliments = [
                 "va chier", 
@@ -42,6 +47,7 @@
             score = score + 1
             // je demande à l'afficheur de le traduire en visuel 
             document.getElementById('compteur').innerText = score;
+            document.getElementById('rang').innerText = complimentation;
         }
 
         // On dit au bouton : "Au clic, exécute la fonction direBravo"
