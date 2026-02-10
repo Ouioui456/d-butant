@@ -29,9 +29,9 @@
             // je demande à l'afficheur de le traduire en visuel 
             document.getElementById('compteur').innerText = score;
                 if (score > 20) {
-                     document.getElementById('rang').innerText = "Complimenté";
+                     document.getElementById('rang').innerText = "Gros Bouffon";
                 } else if (score > 10) {
-                     document.getElementById('rang').innerText = "Midfield";
+                     document.getElementById('rang').innerText = "Salopard";
                 } else {
                     document.getElementById('rang').innerText = complimentation;
                 }
