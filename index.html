@@ -56,7 +56,18 @@
             const hasard = Math.floor(Math.random() * compliments.length);
             document.getElementById('message').innerText = compliments[hasard];
         }
-    </script>
 
+        // génération des couleurs 
+        function generercouleur() {
+            const couleur = ["#FF0000", "#A020F0", "#FFFF00", "#008000"];
+            const hasard = Math.floor(Math.random() * couleur.length);
+            
+            const messageElement = document.getElementById('message');
+
+            messageElement.innerText = compliments[hasardCompliment];
+            messageElement.style.color = couleurs[hasardCouleur];
+        }
+    </script>
+        
 </body>
 </html>
