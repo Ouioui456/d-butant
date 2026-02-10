@@ -18,11 +18,6 @@
         let complimentation = "Grosse merde";
         // On crée une fonction qui contient l'action
         function direBravo() {
-            if (score >= 20) {
-                 document.getElementById('rang').innerText = "Complimenté";
-            } else if (score >= 10) {
-                 document.getElementById('rang').innerText = "Midfield";
-            }
             // constante de réalisation de liste []
             const listeCompliments = [
                 "va chier", 
@@ -47,6 +42,11 @@
             afficheur.style.color = listeCouleurs[indexCouleursAleatoire];
             // je dis au score qu'il doit s'ajouter 1 à chaque action de la fonction
             score = score + 1
+                if (score >= 20) {
+                     document.getElementById('rang').innerText = "Complimenté";
+                } else if (score >= 10) {
+                     document.getElementById('rang').innerText = "Midfield";
+                }
             // je demande à l'afficheur de le traduire en visuel 
             document.getElementById('compteur').innerText = score;
             document.getElementById('rang').innerText = complimentation;
