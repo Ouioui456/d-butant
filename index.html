@@ -49,6 +49,7 @@
 
     <p> J'ai reçu aujourd'hui <span id ="compteur">0</span> compliments !</p>
     <p> Ton rang de personne complimentée : <span id ="rang"></span></p>
+    <button id="boutondark">🌙/☀️</button>
     <script>
         let score = 0; 
         let complimentation = "Grosse merde";
@@ -88,9 +89,18 @@
                     document.getElementById('rang').innerText = complimentation;
                 }
         }
-
+        //fonction mode sombre 
+        function etallume () {
+            if document.body.style.backgroundColor("rgb(30, 30, 30)") {
+                document.body.style.background(135deg, #667eea 0%, #764ba2 100%);
+            } else {
+                document.body.style.background = "none";
+                document.body.style.backgroundColor = "#1e1e1e"; 
+            }
+        }
         // On dit au bouton : "Au clic, exécute la fonction direBravo"
         document.getElementById('monBouton').addEventListener('click', direBravo);
+        document.getElementById('boutondark').addEventListener('click', etallume);
     </script>
 </div>    
 </body>
