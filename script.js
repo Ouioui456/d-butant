@@ -38,7 +38,7 @@
         }
         //fonction mode sombre 
         function etallume () {
-                const mycard = document.querySelection('.card); 
+                const mycard = document.querySelection('.card'); 
                                                        
             if (document.body.style.backgroundColor === "rgb(30, 30, 30)") {
                 document.body.style.background = "linear-gradient(135deg, #667eea 0%, #764ba2 100%)";
