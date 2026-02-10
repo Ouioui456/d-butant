@@ -1,29 +1,27 @@
-<button id="btnGenerer" type="button">Générer</button>
-<p id="message"></p> 
+<!DOCTYPE html>
+<html>
+<body>
 
-<script>
-    // 1. Sélection des éléments
-    const btn = document.getElementById('btnGenerer');
-    const messageElement = document.getElementById('message');
-
-    // 2. Nos banques de données
-    const compliments = [
-        "Tu vas devenir un super dev ! 💻",
-        "Ta persévérance est ta plus grande force. 🚀",
-        "Chaque erreur est une leçon déguisée. 💡",
-        "Le code, c'est comme le vélo : ça finit par rentrer ! 🚲"
-    ];
+    <h2>Mon Générateur de Compliments</h2>
     
-    const couleurs = ["#FF0000", "#A020F0", "#FFD700", "#008000"];
+    <button id="monBouton">Clique-moi !</button>
+    
+    <h3 id="zoneTexte">Le compliment apparaîtra ici...</h3>
 
-    // 3. Logique au clic
-    btn.addEventListener('click', () => {
-        // Calcul d'un index aléatoire
-        const indexTexte = Math.floor(Math.random() * compliments.length);
-        const indexCouleur = Math.floor(Math.random() * couleurs.length);
+    <script>
+        // On crée une fonction qui contient l'action
+        function direBravo() {
+            // On sélectionne la zone de texte
+            const afficheur = document.getElementById('zoneTexte');
+            // On change son contenu
+            afficheur.innerText = "Tu progresses à chaque ligne de code ! 🚀";
+            // On change sa couleur
+            afficheur.style.color = "green";
+        }
 
-        // Modification du contenu et de la couleur
-        messageElement.innerText = compliments[indexTexte];
-        messageElement.style.color = couleurs[indexCouleur];
-    });
-</script>
+        // On dit au bouton : "Au clic, exécute la fonction direBravo"
+        document.getElementById('monBouton').addEventListener('click', direBravo);
+    </script>
+
+</body>
+</html>
