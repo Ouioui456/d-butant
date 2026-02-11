@@ -49,7 +49,7 @@
         }
 
         function copie () {
-                const texte = document.getElementById('ZoneTexte').innerText; 
+                const texte = document.getElementById('zoneTexte').innerText; 
                 navigator.clipboard.writeText(texte);
         }
                 
