@@ -56,4 +56,4 @@
         // On dit au bouton : "Au clic, exécute la fonction direBravo"
         document.getElementById('monBouton').addEventListener('click', direBravo);
         document.getElementById('boutondark').addEventListener('click', etallume);
-        document.getElementBYId('copiercoller').addEventListener('click', copie);
+        document.getElementById('copiercoller').addEventListener('click', copie);
