@@ -50,7 +50,7 @@
 
         function copie () {
                 const texte = document.getElementById('ZoneTexte').innerText; 
-                navigator.clipboard.WriteTexte() 
+                navigator.clipboard.writeText(texte);
         }
                 
         // On dit au bouton : "Au clic, exécute la fonction direBravo"
